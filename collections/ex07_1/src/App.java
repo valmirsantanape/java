@@ -1,7 +1,8 @@
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
-
 
 public class App {
     public static void main(String[] args) throws Exception {
@@ -45,10 +46,32 @@ public class App {
 
     System.out.println("Confira se a nota 5.0 esta na lista: ");
     System.out.println(notas.contains(5.0)? "Nota 05 está na lista":"Nota 5.0 não esta na lista");
-    System.out.println("Exiba as notas na ordem que foram informadas: ");
+    // System.out.println("Exiba as notas na ordem que foram informadas: ");
 
-    for(Double nota : notas) System.out.println(nota);
+    // for(Double nota : notas) System.out.println(nota);
+    System.out.println("Exiba a terceira nota adicionada: ");
 
+    System.out.println("A terceira nota adicionada foi: " + notas.get(2));
+
+    System.out.println("Exiba a menor nota: " + Collections.min(notas));
+    System.out.println("Exiba a maior nota: " + Collections.max(notas));
+
+    Double soma = 0d;
+
+    for(double nota : notas){
+        soma = soma + nota;
+    }
+    System.out.println("1º A soma de todas as notas é: "  + soma);
+
+    Iterator<Double> iterator = notas.iterator();
+    
+    soma = 0d;
+    while(iterator.hasNext()){
+        Double next = iterator.next();
+        soma+=next;
+    }
+    
+    System.out.println("2º A soma de todas as notas é: "  + soma);
 
 
 
