@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.Iterator;
 import java.util.List;
@@ -73,9 +72,30 @@ public class App {
     
     System.out.println("2º A soma de todas as notas é: "  + soma);
 
+    System.out.println("Exiba a media das notas: " + soma/notas.size());
+    System.out.println("Remova a nota 0: ");
+    notas.remove(0d);
+    System.out.println(notas);
 
+    System.out.println("Remova as notas menores que 7 e exiba a lista: ");
 
-        
+    Iterator<Double> iterator_ = notas.iterator();
+    while(iterator_.hasNext()){
+        Double next = iterator_.next();
+        if(next < 7) iterator_.remove();
+    }
+    
+    System.out.println();
+    System.out.println("Lista de notas atualizadas: ");
+    System.out.println(notas);
+    System.out.println();
+    System.out.println("Apague toda a lista: ");
+
+    System.out.println(notas.isEmpty()? "A lista está vazia": "A lista não esta vazia.");
+    System.out.println();
+    notas.clear();
+    System.out.println(notas.isEmpty()? "A lista está vazia": "A lista não esta vazia.");
+    
 
     }
 }
