@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -24,6 +23,8 @@ public class App {
 
         //Mostrar novamente na ordem natural
         System.out.println("--\tOrdem Natural\t--");
+        Collections.sort(meusGatos);
+        System.out.println(meusGatos);
 
         //Para exibir a lista novamente na ordem natural usa-se o metodo Caparatle
 
@@ -78,6 +79,7 @@ class Gato implements Comparable<Gato> {
                 ", cor='" + cor + '\'' +                
                 "}";
     }
+    //A implementação da interface compareble na classe obriga sobrescrever o metodo compareTo
     @Override
     public int compareTo(Gato gato) {
         // TODO Auto-generated method stub
