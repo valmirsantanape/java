@@ -23,11 +23,11 @@ public class App {
 
         //Mostrar novamente na ordem natural
         System.out.println("--\tOrdem Natural\t--");
+        //Para exibir a lista novamente na ordem natural usa-se o metodo Caparatle
         Collections.sort(meusGatos);
         System.out.println(meusGatos);
 
-        //Para exibir a lista novamente na ordem natural usa-se o metodo Caparatle
-
+        
         
         
 
@@ -45,10 +45,6 @@ class Gato implements Comparable<Gato> {
         this.nome = nome;
         this.idade = idade;
         this.cor = cor;
-    }
-
-    {
-
     }
 
     public String getNome(){
