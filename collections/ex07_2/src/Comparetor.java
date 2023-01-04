@@ -1,0 +1,4 @@
+
+public interface Comparetor<T> {
+
+}

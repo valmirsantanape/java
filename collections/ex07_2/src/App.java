@@ -3,6 +3,10 @@ import java.util.Collections;
 import java.util.List;
 
 public class App {
+    /**
+     * @param args
+     * @throws Exception
+     */
     public static void main(String[] args) throws Exception {
 
         List<Gato> meusGatos = new ArrayList<>(){{
@@ -26,14 +30,12 @@ public class App {
         //Para exibir a lista novamente na ordem natural usa-se o metodo Caparatle
         Collections.sort(meusGatos);
         System.out.println(meusGatos);
-
+        System.out.println();
+        System.out.println("--\tOrdem de Idade\t--");
         
-        
-        
 
-    };
-
-    
+        System.out.println(meusGatos);
+    };    
 }
 
 class Gato implements Comparable<Gato> {
@@ -78,9 +80,7 @@ class Gato implements Comparable<Gato> {
     //A implementação da interface compareble na classe obriga sobrescrever o metodo compareTo
     @Override
     public int compareTo(Gato gato) {
-        // TODO Auto-generated method stub
         return this.getNome().compareToIgnoreCase(gato.getCor());
     }
-    
     
 }
