@@ -9,6 +9,7 @@ public class TratamentoDeExcecao {
         try {
             int resultado = dividir(Integer.parseInt(a), Integer.parseInt(b));
             System.out.println("Resultado: " + resultado);
+            JOptionPane.showMessageDialog(null, "Resultado: " + resultado);
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "Entrada inválida, informe um numero inteiro! " +  e);
         } finally {
@@ -18,7 +19,5 @@ public class TratamentoDeExcecao {
         System.out.println("O código continua...");
     }
 
-    private static int dividir(int a, int b) {
-        return (a / b);
-    }
+    private static int dividir(int a, int b) { return a / b; }
 }
